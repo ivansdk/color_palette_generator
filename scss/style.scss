@@ -1,0 +1,109 @@
+@import 'nullstyle';
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: rgb(235, 233, 233);
+}
+
+.wrapper {
+    min-width: 100%;
+    overflow: hidden;
+}
+
+.container{
+    max-width: 1500px;
+    margin: 60px auto;
+    @media(max-width: 1400px){
+        width: 100%;
+        padding: 0 30px;
+    }
+}
+
+.palette {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 250px);
+    gap: 30px;
+    justify-content: center;
+}
+
+.card{
+    width: 250px;
+    height: 300px;
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+    transition: all 0.2s;
+    &:active{
+        transform: scale(0.9);
+    }
+    &__color{
+        width: 100%;
+        height: 85%;
+        border-radius: 10px;
+        position: relative;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__lock{
+        width: 80px;
+        height: 80px;
+        opacity: 0;
+        transition: all 0.2s;
+        -moz-user-select: none; 
+        -khtml-user-select: none; 
+        user-select: none;
+        &_pre-active{
+            opacity: 0.1;
+        }
+        &_active{
+            opacity: 1;
+        }
+    }
+    &__text{
+        -moz-user-select: none; 
+        -khtml-user-select: none; 
+        user-select: none;
+        font-size: 24px;
+        text-transform: uppercase;
+        text-align: center;
+        margin-top: 15px;
+        cursor: pointer;
+    }
+    &__canvas {
+        position: absolute;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.refresh-btn{
+    width: 250px;
+    min-height: 65px;
+    border-radius: 10px;
+    background: rgb(236, 184, 41);
+    color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 700;
+    position: fixed;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    transition: all 0.1s ease;
+    @media (min-width: 991px) {
+        &:hover{
+            background: rgb(213, 162, 21);
+        }
+    }
+}
+
