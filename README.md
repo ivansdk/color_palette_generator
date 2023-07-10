@@ -33,6 +33,6 @@ Color Palette Generator is a simple web page that allows you to generate color p
 
 ## License
 
-This project is licensed under the MIT License. Feel free to use and modify it as per your needs.
+This project is licensed under the [MIT License](LICENSE.md). Feel free to use and modify it as per your needs.
 
 **Note:** This project was developed for learning purposes and may not have extensive browser compatibility or error handling.
